@@ -1,0 +1,78 @@
+name: fraudshield
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports: ["127.0.0.1:5433:5432"]
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: ["redis-data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  ml-service:
+    build: ./ml-service
+    environment:
+      ML_SERVICE_TOKEN: ${ML_SERVICE_TOKEN}
+      BEDROCK_ENABLED: ${BEDROCK_ENABLED:-false}
+      BEDROCK_MODEL_ID: ${BEDROCK_MODEL_ID:-}
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-local}
+      BEDROCK_EMBEDDING_MODEL_ID: ${BEDROCK_EMBEDDING_MODEL_ID:-amazon.titan-embed-text-v2:0}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DB_HOST: postgres
+      DB_NAME: ${POSTGRES_DB}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      REDIS_HOST: redis
+      ML_URL: http://ml-service:8000
+      ML_SERVICE_TOKEN: ${ML_SERVICE_TOKEN}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      DEMO_ENABLED: ${DEMO_ENABLED:-true}
+      RISK_WEIGHTS: ${RISK_WEIGHTS:-0.35,0.20,0.25,0.10,0.10}
+    ports: ["127.0.0.1:8080:8080"]
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      ml-service: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+  frontend:
+    build: ./frontend
+    ports: ["127.0.0.1:3000:80"]
+    depends_on:
+      backend: {condition: service_healthy}
+volumes:
+  postgres-data:
+  redis-data:
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${DOCKER_SUBNET:-10.246.82.0/24}

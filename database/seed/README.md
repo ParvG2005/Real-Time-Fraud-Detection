@@ -1,0 +1,1 @@
+Demo seed lives in `backend/app/seed.py` so every synthetic transaction uses the same real model and policy as a submitted transaction. Reference cases are clearly marked synthetic. Startup seeds once; the version marker prevents duplicate seeding on normal restarts. Disable future startup seeding with `DEMO_ENABLED=false` (this does not delete existing data).

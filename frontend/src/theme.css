@@ -1,0 +1,1398 @@
+/* FraudShield / Night Signal — cool surfaces, electric accents, semantic outcomes. */
+:root {
+  color-scheme: dark;
+  --green: #52c6ff;
+  --muted: #8c9fbf;
+  --border: #24334c;
+  color: #d9e6ff;
+  background: #080e1a;
+}
+body {
+  background: #080e1a;
+}
+::selection {
+  background: #416cff66;
+  color: #fff;
+}
+input,
+select,
+textarea {
+  background: #0a1323;
+  border-color: #2c3e5a;
+  color: #d4e5ff;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #61789c;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: #68d1ff;
+}
+.primary {
+  background: linear-gradient(110deg, #38b9f4, #638cff);
+  border-color: #61b5ff;
+  color: #071322;
+  box-shadow: 0 3px 18px #269cff24;
+}
+.primary:hover {
+  background: linear-gradient(110deg, #65d1ff, #819fff);
+  box-shadow: 0 4px 24px #2f9bff35;
+}
+.secondary {
+  background: #111d31;
+  color: #b9d4fb;
+  border-color: #2a405f;
+}
+.secondary:hover {
+  background: #192a45;
+  color: #e6f1ff;
+}
+.danger {
+  background: #9f345e;
+  color: #ffe7ef;
+  border: 1px solid #c64d78;
+}
+.icon-button {
+  color: #859dbf;
+}
+.icon-button:hover {
+  background: #1a2a43;
+  color: #70d1ff;
+}
+.text-button,
+.text-link {
+  color: #67caff;
+}
+.eyebrow {
+  color: #809bc0;
+}
+.muted {
+  color: #8c9fbf;
+}
+.sidebar {
+  background: #0b1424;
+  border-color: #23314a;
+  box-shadow: 6px 0 32px #0000000a;
+}
+.brand {
+  color: #e1edff;
+}
+.brand-icon {
+  background: linear-gradient(140deg, #22446c, #153556);
+  color: #6dd7ff;
+  box-shadow: inset 0 0 0 1px #63ccff33;
+}
+.brand-ai {
+  color: #9a9cfc;
+}
+.workspace-select {
+  background: #0e1b2d;
+  border-color: #263952;
+  color: #c0d4f1;
+}
+.workspace-avatar {
+  background: #1b3150;
+  color: #82d0ff;
+}
+.workspace-select small {
+  color: #7692b8;
+}
+.workspace-dot {
+  background: #5acefa;
+  box-shadow: 0 0 7px #42caff55;
+}
+.nav-caption {
+  color: #526d94;
+}
+nav > a {
+  color: #8aa3c8;
+}
+nav > a:hover {
+  background: #111f36;
+  color: #b9d8ff;
+}
+nav > a.active {
+  background: linear-gradient(90deg, #193759, #15273f);
+  color: #79d7ff;
+  box-shadow: inset 2px 0 0 #59cbff;
+}
+nav > a.active svg {
+  filter: drop-shadow(0 0 6px #4dc8ff33);
+}
+.nav-new {
+  background: #153047;
+  border-color: #27526c;
+  color: #6bc8ed;
+}
+.demo-note {
+  background:
+    radial-gradient(ellipse at top right, #25396644, transparent), #101f34;
+  border-color: #253b57;
+  color: #6db7e5;
+}
+.demo-note strong {
+  color: #aec9eb;
+}
+.demo-note p {
+  color: #728db4;
+}
+.demo-note a {
+  color: #6bc9ff;
+}
+.profile {
+  border-color: #22324a;
+}
+.avatar {
+  background: linear-gradient(140deg, #254563, #313663);
+  color: #91d3ff;
+}
+.profile strong {
+  color: #b4cdec;
+}
+.profile small {
+  color: #6b87af;
+}
+.topbar {
+  background: #0c1525e8;
+  border-color: #213149;
+  backdrop-filter: blur(12px);
+}
+.breadcrumb {
+  color: #6c85aa;
+}
+.breadcrumb strong {
+  color: #b9d1f2;
+}
+.breadcrumb > span {
+  color: #3e5578;
+}
+.connection {
+  color: #7491b8;
+}
+.connection i {
+  background: #e4b568;
+}
+.connection.online i {
+  background: #58d3df;
+  box-shadow: 0 0 7px #4fd2ff55;
+}
+.demo-tag {
+  background: #10273a;
+  color: #79bce0;
+  border-color: #254962;
+}
+.page-title h1 {
+  color: #dbe9ff;
+}
+.page-title p {
+  color: #8ba2c3;
+}
+.system-strip {
+  background: linear-gradient(90deg, #10273b, #111f33);
+  border-color: #244861;
+  color: #719bc3;
+}
+.system-strip > span:first-child {
+  color: #73cce9;
+}
+.pulse-dot {
+  background: #59cee6;
+  box-shadow:
+    0 0 0 3px #48caff13,
+    0 0 8px #47c8ff33;
+}
+.system-strip a {
+  color: #7facd6;
+}
+.metric-card,
+.panel {
+  background: #101a2c;
+  border-color: #263650;
+  box-shadow: 0 4px 18px #00000008;
+}
+.metric-label {
+  color: #86a0c3;
+}
+.metric-label svg {
+  color: #7a9bc6;
+}
+.metric-card > strong {
+  color: #dfecff;
+}
+.metric-card > small {
+  color: #7f99bd;
+}
+.metric-card.green .metric-label svg {
+  color: #51cde0;
+}
+.metric-card.amber .metric-label svg {
+  color: #d0b27c;
+}
+.metric-card.rose .metric-label svg {
+  color: #ea89a8;
+}
+.panel-heading h2 {
+  color: #c1d8f6;
+}
+.panel-heading p {
+  color: #7c97bd;
+}
+.panel-heading > svg {
+  color: #709ecd;
+}
+.period {
+  background: #0e1a2d;
+  border-color: #293b58;
+  color: #839fc5;
+}
+.chart-legend {
+  color: #859ebe;
+}
+.donut-label strong {
+  color: #d8e9ff;
+}
+.donut-label small {
+  color: #7e9abd;
+}
+.risk-legend span {
+  color: #8ba7ca;
+}
+.risk-legend strong {
+  color: #c5dcf8;
+}
+.live-label {
+  background: #113141;
+  color: #5ed3ec;
+}
+.text-link {
+  color: #65caff;
+}
+.table-scroll {
+  background: #101a2c;
+}
+th {
+  color: #6f90b8;
+  background: #0e182a;
+  border-color: #23354e;
+}
+td {
+  color: #95afd2;
+  border-color: #1d2e47;
+}
+tbody tr:hover {
+  background: #132039;
+}
+td small {
+  color: #637ea6;
+}
+.transaction-link {
+  color: #a5c7ec;
+}
+.amount {
+  color: #c3d8f5;
+}
+.risk-inline > span {
+  color: #a2bbdc;
+}
+.mini-track {
+  background: #21324c;
+}
+.mini-track i {
+  background: #4dbecf;
+}
+.mini-track .review {
+  background: #d6b26a;
+}
+.mini-track .block {
+  background: #ec789c;
+}
+.badge {
+  background: #10313a;
+  color: #6fd6e0;
+}
+.badge.block,
+.badge.fraud,
+.badge.critical {
+  background: #361d32;
+  color: #f58bab;
+}
+.badge.review,
+.badge.open,
+.badge.escalated {
+  background: #322b20;
+  color: #e4c485;
+}
+.badge.legitimate {
+  background: #143438;
+  color: #72d7ca;
+}
+.badge.not_opened {
+  background: #202b42;
+  color: #95acce;
+}
+.insight-card {
+  background: linear-gradient(110deg, #122a40, #17263f);
+  border-color: #28465f;
+}
+.insight-icon {
+  background: #1b3d56;
+  color: #6cceee;
+}
+.insight-card h3 {
+  color: #accded;
+}
+.insight-card p {
+  color: #769ac3;
+}
+.insight-card .secondary {
+  background: #132a41;
+  color: #8cc6ee;
+  border-color: #2d536f;
+}
+.latency-card {
+  background: #101b2d;
+  border-color: #263650;
+  color: #61b8de;
+}
+.latency-card strong {
+  color: #a7d7f7;
+}
+.latency-card span {
+  color: #6a8bb3;
+}
+.footer {
+  color: #4c688e;
+}
+.search-field {
+  background: #101b2d;
+  border-color: #2c3e58;
+  color: #6e93be;
+}
+.pagination {
+  color: #7795bd;
+}
+.case-summary {
+  color: #7897bf;
+}
+.loading,
+.empty {
+  color: #7d9bc3;
+}
+.error {
+  background: #321c2d;
+  border-color: #69314a;
+  color: #f0a4bd;
+}
+.success {
+  background: #10313b;
+  border-color: #285361;
+  color: #93d7e4;
+}
+.info {
+  background: #132b41;
+  border-color: #2c4764;
+  color: #a0c2e6;
+}
+.toast {
+  background: #10283e;
+  color: #c1e8fc;
+  border: 1px solid #3b6889;
+  box-shadow: 0 12px 36px #0006;
+}
+.back-link {
+  color: #77a5d3;
+}
+.detail-hero {
+  background:
+    radial-gradient(ellipse at right, #213c6022, transparent), #101c30;
+  border-color: #293c58;
+}
+.detail-hero h2 {
+  color: #daebff;
+}
+.detail-hero > div > span:last-child {
+  color: #91abd0;
+}
+.hero-detail {
+  color: #6493c4;
+}
+.hero-detail span {
+  color: #7a96bd;
+}
+.hero-detail strong {
+  color: #bdd8f5;
+}
+.risk-orb {
+  background: #113641;
+  color: #7adcec;
+  border: 1px solid #26566a;
+}
+.risk-orb.block {
+  background: #361e35;
+  color: #f09bb9;
+  border-color: #673450;
+}
+.risk-orb.review {
+  background: #342d24;
+  color: #ddc18e;
+  border-color: #5e5135;
+}
+.tabs {
+  border-color: #263a56;
+}
+.tabs button {
+  color: #738eb7;
+}
+.tabs button.active {
+  border-color: #57c8ff;
+  color: #91d5fc;
+}
+.tabs button > span {
+  background: #1b3652;
+  color: #89c8f0;
+}
+.signal strong {
+  color: #9fbcdf;
+}
+.signal small {
+  color: #5c7da6;
+}
+.signal-track {
+  background: #20314b;
+}
+.signal-track i {
+  background: linear-gradient(90deg, #3fb9e9, #638cff);
+}
+.signal b {
+  color: #9abfdf;
+}
+.panel-foot {
+  border-color: #25374f;
+  color: #6f90b5;
+}
+.evidence-list li {
+  color: #a3bddc;
+}
+.evidence-list li > span {
+  background: #15384b;
+  color: #67cdec;
+}
+.investigation-body > p {
+  color: #87a2c6;
+}
+.investigation-body label {
+  color: #9ab5d5;
+}
+.timeline {
+  border-color: #273b55;
+}
+.timeline h4 {
+  color: #8eb7df;
+}
+.timeline p {
+  color: #83a7ce;
+}
+.timeline i {
+  background: #64b6ea;
+  box-shadow: 0 0 5px #43bfff33;
+}
+.timeline small {
+  color: #5b7ea8;
+}
+blockquote {
+  background: #11243a;
+  border-left-color: #518bbb;
+  color: #94b8dc;
+}
+.prose {
+  color: #99b6d8;
+}
+.prose h4 {
+  color: #bad6f2;
+}
+.similar-case {
+  border-color: #263951;
+}
+.similar-case h3 {
+  color: #acd2f7;
+}
+.similar-case p {
+  color: #88a8cf;
+}
+.similar-case small {
+  color: #6f90b8;
+}
+.similarity {
+  background: #18374e;
+  color: #85d5ed;
+  border: 1px solid #2c5770;
+}
+.history-row {
+  border-color: #263951;
+  color: #91b3da;
+}
+.history-row small {
+  color: #688bb5;
+}
+.feature-grid div {
+  background: #10233a;
+  border: 1px solid #1e3a55;
+}
+.feature-grid dt {
+  color: #7fa5cb;
+}
+.feature-grid dd {
+  color: #a9d5f3;
+}
+.demo-banner {
+  background:
+    radial-gradient(ellipse at top right, #4e58ca20, transparent),
+    linear-gradient(110deg, #112d47, #182641);
+  border-color: #2d4b6e;
+}
+.demo-banner h2 {
+  color: #b9daff;
+}
+.demo-banner p {
+  color: #80a5cc;
+}
+.demo-banner-icon {
+  background: #214669;
+  color: #7dd6ff;
+  box-shadow: 0 0 22px #3eb1ff0b;
+}
+.scenario-top {
+  color: #69b7e4;
+}
+.scenario h2 {
+  color: #b9d9fa;
+}
+.scenario p {
+  color: #82a3cc;
+}
+.scenario-expected {
+  color: #699cc9;
+}
+.result-card {
+  background: linear-gradient(100deg, #112f43, #192b48);
+  border-color: #365b7c;
+}
+.result-card h2 {
+  color: #b7e0fa;
+}
+.result-card p {
+  color: #7babd1;
+}
+.demo-method h3 {
+  color: #91bce3;
+}
+.demo-method > div > span {
+  color: #7e9fc8;
+}
+.demo-method b {
+  color: #3d648f;
+}
+.demo-method > p {
+  color: #6887af;
+}
+.full-button {
+  background: #111e32;
+  color: #b4d2ef;
+}
+.rule-card h2 {
+  color: #afd0f2;
+}
+.rule-card p {
+  color: #7d9fc7;
+}
+.rule-card code {
+  background: #0d2036;
+  color: #7eb7e5;
+  border-color: #24405c;
+}
+.rule-top {
+  color: #7ca2ca;
+}
+.toggle {
+  background: #2a3d58;
+}
+.toggle i {
+  background: #8da8cb;
+  box-shadow: 0 1px 4px #0004;
+}
+.toggle.on {
+  background: linear-gradient(90deg, #32aedf, #667eff);
+  box-shadow: 0 0 12px #489dff24;
+}
+.toggle.on i {
+  background: #dbf4ff;
+}
+.rule-bottom {
+  border-color: #263c57;
+  color: #779bc3;
+}
+.rule-bottom strong {
+  color: #91d4f7;
+}
+.modal-backdrop {
+  background: #030712aa;
+}
+.modal {
+  background: #101d32;
+  border: 1px solid #344c6c;
+  box-shadow: 0 25px 80px #0008;
+}
+.stats-list > div {
+  border-color: #253b56;
+}
+.stats-list dt {
+  color: #80a2c9;
+}
+.stats-list dd {
+  color: #aed4f6;
+}
+.confusion-grid > div {
+  background: #142d42;
+}
+.confusion-grid small {
+  color: #83acce;
+}
+.confusion-grid strong {
+  color: #a9dcf2;
+}
+.drift-list > div {
+  color: #82a7cf;
+}
+.drift-list strong {
+  color: #87c9ef;
+}
+.login-story {
+  background:
+    radial-gradient(ellipse at 20% 15%, #233e8555, transparent 50%),
+    radial-gradient(ellipse at 90% 85%, #534fc333, transparent 45%), #09182d;
+  color: #d7e8ff;
+}
+.login-story .brand {
+  color: #d8edff;
+}
+.login-story .brand > svg {
+  color: #6ed5ff;
+  filter: drop-shadow(0 0 12px #36baff44);
+}
+.login-story .brand-ai {
+  color: #a0a9ff;
+}
+.login-story .eyebrow {
+  color: #70a5d5;
+}
+.login-story h1 {
+  color: #d6eaff;
+}
+.login-story p {
+  color: #7a9dcc;
+}
+.login-story > small {
+  color: #4578a9;
+}
+.login-flow {
+  color: #7ccef3;
+}
+.login-flow svg {
+  color: #557fec;
+}
+.login-form {
+  background:
+    radial-gradient(ellipse at 0% 100%, #142c5222, transparent), #0b1324;
+}
+.login-form h2 {
+  color: #c6e1ff;
+}
+.login-form p {
+  color: #7393bf;
+}
+.login-form label {
+  color: #8eb2da;
+}
+.login-help {
+  color: #56799f !important;
+}
+.login-help code {
+  color: #88b8df;
+}
+.shap-chart {
+  color: #8db0d8;
+}
+/* Cool analytics surfaces and electric model visualization. */
+.analytics-page-label {
+  color: #d9e8ff;
+}
+.intelligence-hero {
+  background: linear-gradient(115deg, #0c1832, #10172e 60%, #121e3c);
+  border-color: #2d4068;
+  box-shadow:
+    0 12px 50px #182d720f,
+    inset 0 1px 0 #769fff0d;
+}
+.hero-mesh {
+  background-image:
+    linear-gradient(#779fff10 1px, transparent 1px),
+    linear-gradient(90deg, #779fff10 1px, transparent 1px);
+}
+.hero-glow {
+  background: radial-gradient(
+    ellipse,
+    #797bff50 0%,
+    #2b88c536 38%,
+    transparent 69%
+  );
+  filter: blur(15px);
+}
+.intelligence-kicker {
+  color: #8babeb;
+}
+.intelligence-kicker > svg {
+  color: #77d7ff;
+}
+.hero-status {
+  color: #83d9f1;
+  border-color: #479bda33;
+  background: #2582c110;
+}
+.hero-status i {
+  background: #6bd9ff;
+  box-shadow: 0 0 10px #49c6ff88;
+}
+.intelligence-copy h1 {
+  color: #e8f1ff;
+}
+.intelligence-copy h1 > span {
+  background: linear-gradient(100deg, #6ee3ff 0%, #77acff 48%, #b2a0ff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intelligence-copy > p {
+  color: #92a9cf;
+}
+.hero-chips > span {
+  border-color: #6f9ded33;
+  background: #8faeff04;
+  color: #91acd8;
+}
+.hero-scroll {
+  color: #86c9fb;
+}
+.model-orbit {
+  background: linear-gradient(140deg, #698fff0a, #b1bfff02);
+  border-color: #768ceb3d;
+  box-shadow:
+    inset 0 1px 0 #a0b3ff0e,
+    0 15px 40px #05081722;
+}
+.orbit-label {
+  color: #89aee2;
+}
+.orbit-label svg {
+  color: #77c4ff;
+}
+.orbit-guide {
+  stroke: #7ebdff2b;
+}
+.orbit-track {
+  stroke: #8cafff15;
+}
+.orbit-value {
+  stroke: #65d4ff;
+  filter: drop-shadow(0 0 7px #55bdff66);
+}
+.orbit-inner {
+  fill: #7fafff04;
+  stroke: #849eff15;
+}
+.orbit-number > small {
+  color: #a0b7e4;
+}
+.orbit-number > strong {
+  color: #d8edff;
+  text-shadow: 0 0 26px #5eb6ff15;
+}
+.orbit-number > span {
+  color: #7994c1;
+}
+.orbit-satellite {
+  background: #8ab1ff;
+  box-shadow: 0 0 12px #6a9dff88;
+}
+.orbit-footer {
+  border-color: #819fff20;
+  color: #7e9ece;
+}
+.orbit-footer i {
+  background: #71bdfb;
+}
+.analytics-jumpnav {
+  border-color: #243653;
+}
+.analytics-jumpnav > button {
+  color: #88a9d1;
+}
+.analytics-jumpnav > button > span {
+  color: #4f709b;
+}
+.analytics-jumpnav > button > svg {
+  color: #547fb0;
+}
+.analytics-jumpnav > button:hover {
+  background: #12263f;
+  color: #91d0f7;
+}
+.jumpnav-note {
+  color: #6487b4;
+}
+.analytics-kpi {
+  --tone: #56c9ef;
+  --tone-soft: #143246;
+  background: linear-gradient(130deg, #12213a, #101a2e);
+  border-color: #293d59;
+  box-shadow: 0 6px 24px #0000000a;
+}
+.analytics-kpi.blue {
+  --tone: #739dff;
+  --tone-soft: #1c2d51;
+}
+.analytics-kpi.violet {
+  --tone: #b092ef;
+  --tone-soft: #2a2349;
+}
+.analytics-kpi.amber {
+  --tone: #6bd6cc;
+  --tone-soft: #12363f;
+}
+.kpi-heading {
+  color: #8faed3;
+}
+.analytics-kpi > strong {
+  color: #d7e9ff;
+}
+.analytics-kpi > strong > small {
+  color: #5f80aa;
+}
+.analytics-kpi > p {
+  color: #8eaacd;
+}
+.kpi-footnote {
+  color: #54769e;
+}
+.analytics-kpi:hover {
+  border-color: #4676a7;
+  box-shadow: 0 9px 30px #2b82dd12;
+}
+.benchmark-note {
+  color: #6f90ba;
+}
+.benchmark-note > svg {
+  color: #6a9dcc;
+}
+.benchmark-note strong {
+  color: #90b4db;
+}
+.analytics-panel-heading > svg {
+  color: #6a9ccf;
+}
+.section-number {
+  color: #5480b0;
+}
+.analytics-panel-heading h2 {
+  color: #bedaff;
+}
+.analytics-panel-heading p {
+  color: #789bc5;
+}
+.segmented {
+  background: #0a1528;
+  border-color: #263b59;
+}
+.segmented button {
+  color: #6285b3;
+}
+.segmented button.selected {
+  background: #1a3553;
+  color: #94d3f8;
+  box-shadow: 0 1px 5px #03091433;
+}
+.activity-summary strong {
+  color: #b4d9fb;
+}
+.activity-summary > div > span {
+  color: #7298c3;
+}
+.activity-summary small {
+  color: #668bb6;
+}
+.chart-mode > button {
+  color: #678ab8;
+}
+.chart-mode > button.selected {
+  color: #7fd6fa;
+  border-bottom-color: #50bfff;
+}
+.analytics-chart-foot {
+  border-color: #243950;
+  color: #668db9;
+}
+.legend-green {
+  background: #61bded;
+}
+.legend-pale {
+  background: #2c5476;
+}
+.dimension-tabs > button {
+  background: #102239;
+  color: #7ca4cf;
+}
+.dimension-tabs > button.selected {
+  background: #183954;
+  border-color: #305e80;
+  color: #8cd3f7;
+}
+.feature-observatory {
+  background:
+    radial-gradient(ellipse at top right, #475b9330, transparent),
+    linear-gradient(120deg, #12283d, #15213a);
+  border-color: #2e4969;
+}
+.feature-observatory h2 {
+  color: #a7d3f6;
+}
+.shift-sample {
+  color: #6b98c2;
+}
+.shift-sample strong {
+  color: #88c0e7;
+}
+.feature-shift-row > div:first-child {
+  color: #87afd9;
+}
+.feature-shift-row strong {
+  color: #99d0f6;
+}
+.feature-shift-row strong small {
+  color: #597fa9;
+}
+.feature-shift-track {
+  background: #223854;
+}
+.feature-shift-track i {
+  background: linear-gradient(90deg, #3fbddf, #7992ff);
+}
+.feature-shift-row > small {
+  color: #5c88b4;
+}
+.observatory-note {
+  color: #688eb6;
+}
+.split-track > i:nth-child(1) {
+  background: #578ff1;
+}
+.split-track > i:nth-child(2) {
+  background: #6bbcdc;
+}
+.split-track > i:nth-child(3) {
+  background: #334c77;
+}
+.dataset-split small {
+  color: #698bb7;
+}
+.dataset-split strong {
+  color: #99c3eb;
+}
+.evaluation-stats > div {
+  border-color: #263950;
+}
+.evaluation-stats dt {
+  color: #819fc8;
+}
+.evaluation-stats dd {
+  color: #9dc6ee;
+}
+.evaluation-model {
+  background: #0d192d;
+  border-color: #273c54;
+  color: #6f9ac5;
+}
+.evaluation-model code {
+  color: #4e729c;
+}
+.confusion-matrix > div {
+  background: linear-gradient(135deg, #132f41, #15304a);
+  border-color: #28506a;
+}
+.confusion-matrix > div:hover {
+  box-shadow: 0 8px 24px #3a94e712;
+  border-color: #4184ab;
+}
+.confusion-matrix > div > span {
+  color: #76b8d9;
+}
+.confusion-matrix strong {
+  color: #8bd5f3;
+}
+.confusion-matrix small {
+  color: #5486af;
+}
+.confusion-matrix .false-positive,
+.confusion-matrix .false-negative {
+  background: linear-gradient(130deg, #30213d, #261f36);
+  border-color: #503450;
+}
+.confusion-matrix .false-positive > span,
+.confusion-matrix .false-negative > span {
+  color: #c893b9;
+}
+.confusion-matrix .false-positive > strong,
+.confusion-matrix .false-negative > strong {
+  color: #e3b0d3;
+}
+.confusion-matrix .false-positive > small,
+.confusion-matrix .false-negative > small {
+  color: #976d96;
+}
+.feedback-footnote {
+  color: #7293bc;
+}
+.feedback-link {
+  background: #0f2035;
+  border-color: #273e58;
+  color: #82bced;
+}
+.feedback-link:hover {
+  background: #142c45;
+}
+.analytics-closing {
+  border-color: #263d57;
+}
+.closing-symbol {
+  background: linear-gradient(130deg, #1b3f5e, #242f60);
+  color: #80d0fc;
+}
+.analytics-closing h3 {
+  color: #a6d3f4;
+}
+.analytics-closing p {
+  color: #7293bd;
+}
+.analytics-closing .primary {
+  background: linear-gradient(110deg, #38b9f4, #638cff);
+  border-color: #61b5ff;
+  color: #071322;
+}
+.analytics-closing .primary:hover {
+  background: linear-gradient(110deg, #65d1ff, #819fff);
+}
+@keyframes satellite-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    box-shadow: 0 0 4px #6ca6ff22;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 14px #79adff99;
+  }
+}
+/* Recharts labels inherit a legible cool palette in every view. */
+.recharts-cartesian-axis-tick-value {
+  fill: #819fc9 !important;
+}
+.recharts-cartesian-grid line {
+  stroke: #2a3b55 !important;
+}
+.recharts-tooltip-cursor {
+  fill: #536f9615 !important;
+  stroke: #45678e44 !important;
+}
+.recharts-default-tooltip {
+  background: #12223a !important;
+  border-color: #345173 !important;
+  color: #d0e7ff !important;
+  box-shadow: 0 8px 24px #0004;
+}
+.recharts-tooltip-label {
+  color: #bddbf8 !important;
+}
+.recharts-tooltip-item {
+  color: #95d4fc !important;
+}
+.recharts-legend-item-text {
+  color: #8facd1 !important;
+}
+.recharts-reference-line-line {
+  stroke: #456488 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-satellite {
+    animation: none !important;
+  }
+}
+/* Blue / red waves on a black-and-white canvas. Decorative waves never encode data. */
+:root {
+  --border: #273144;
+  background: #080b12;
+  color: #e5edf9;
+}
+body {
+  background: #080b12;
+}
+.sidebar {
+  background: #0a0f19;
+  border-color: #202b3c;
+}
+.main-shell {
+  background:
+    radial-gradient(ellipse at 5% 0%, #2777ff07, transparent 36%),
+    radial-gradient(ellipse at 100% 35%, #e83f5306, transparent 40%);
+}
+.topbar {
+  background: #0c111ce8;
+  border-color: #212c3e;
+}
+.panel,
+.metric-card {
+  background: #101724;
+  border-color: #273449;
+}
+.brand {
+  color: #f2f6ff;
+}
+.brand-ai {
+  color: #f0838e;
+}
+.page-title h1,
+.analytics-page-label {
+  color: #eaf2ff;
+}
+.primary {
+  background: linear-gradient(110deg, #318def, #557afa);
+  border-color: #648dff;
+  color: #fff;
+  box-shadow: 0 4px 20px #286dff22;
+}
+.primary:hover {
+  background: linear-gradient(110deg, #48a6ff, #6b8bff);
+  box-shadow: 0 5px 26px #276eff35;
+}
+.badge.block,
+.badge.fraud,
+.badge.critical {
+  background: #351c27;
+  color: #ff8b96;
+}
+.danger {
+  background: #a83249;
+  border-color: #d65066;
+  color: #fff0f2;
+}
+.metric-card.rose .metric-label svg {
+  color: #f17c89;
+}
+.mini-track .block {
+  background: #f26476;
+}
+.risk-orb.block {
+  background: #331c29;
+  border-color: #653145;
+  color: #ff9eab;
+}
+.error {
+  background: #311c27;
+  border-color: #703549;
+  color: #ffacb8;
+}
+.intelligence-hero {
+  background:
+    radial-gradient(ellipse at 88% 85%, #851f3226, transparent 45%),
+    linear-gradient(115deg, #101a31, #0c1220 58%, #17131e);
+  border-color: #32405b;
+  box-shadow:
+    0 18px 55px #00000015,
+    inset 0 1px 0 #91adff0b;
+}
+.hero-mesh {
+  opacity: 0.38;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+.hero-glow {
+  background: radial-gradient(
+    ellipse at 35% 40%,
+    #3d8eff4d 0%,
+    #344c8b22 35%,
+    transparent 67%
+  );
+  right: 30px;
+  top: -160px;
+  animation: ambient-drift 12s ease-in-out infinite alternate;
+}
+.intelligence-copy h1 {
+  color: #f1f5ff;
+}
+.intelligence-copy h1 > span {
+  background: linear-gradient(
+    100deg,
+    #86ccff 0%,
+    #b7d8ff 44%,
+    #f2d8e5 80%,
+    #f5a5ae 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-waves {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.64;
+}
+.hero-waves path {
+  fill: none;
+  stroke-width: 1.3;
+  vector-effect: non-scaling-stroke;
+}
+.hero-waves .wave-haze {
+  stroke-width: 25;
+  filter: blur(14px);
+  opacity: 0.24;
+}
+.hero-wave-blue {
+  animation: wave-flow-blue 14s ease-in-out infinite alternate;
+}
+.hero-wave-red {
+  animation: wave-flow-red 17s ease-in-out infinite alternate;
+}
+.model-orbit {
+  background: linear-gradient(130deg, #709dff08, #ff8ca604);
+  border-color: #667aaf4a;
+  box-shadow:
+    inset 0 1px 0 #bfceff0c,
+    0 15px 40px #02060d33;
+}
+.orbit-value {
+  stroke: #77bfff;
+  filter: drop-shadow(0 0 7px #4f9cff66);
+}
+.orbit-guide {
+  stroke: #e58b9835;
+}
+.orbit-number > strong {
+  color: #f2f6ff;
+  text-shadow: 0 0 30px #65a8ff1a;
+}
+.satellite-two {
+  background: #ff7a8b;
+  box-shadow: 0 0 10px #ff586966;
+}
+.analytics-kpi {
+  background: linear-gradient(130deg, #142037, #101724);
+  border-color: #2c3b52;
+}
+.analytics-kpi.violet {
+  --tone: #ee8596;
+  --tone-soft: #372335;
+}
+.analytics-kpi.amber {
+  --tone: #bacfe9;
+  --tone-soft: #263247;
+}
+.analytics-kpi > strong {
+  color: #e8f1ff;
+}
+.feature-observatory {
+  background:
+    radial-gradient(ellipse at top right, #78454f15, transparent),
+    linear-gradient(120deg, #122338, #151c2b);
+  border-color: #30435e;
+}
+.feature-shift-track i {
+  background: linear-gradient(90deg, #469bdf, #8a9edd);
+}
+.confusion-matrix .false-positive,
+.confusion-matrix .false-negative {
+  background: linear-gradient(130deg, #331e2b, #231c2c);
+  border-color: #5e3246;
+}
+.confusion-matrix .false-positive > span,
+.confusion-matrix .false-negative > span {
+  color: #e797a6;
+}
+.confusion-matrix .false-positive > strong,
+.confusion-matrix .false-negative > strong {
+  color: #f1b6c2;
+}
+.confusion-matrix .false-positive > small,
+.confusion-matrix .false-negative > small {
+  color: #ab778c;
+}
+.analytics-closing .primary {
+  background: linear-gradient(110deg, #318def, #557afa);
+  border-color: #648dff;
+  color: #fff;
+}
+.analytics-closing .primary:hover {
+  background: linear-gradient(110deg, #48a6ff, #6b8bff);
+}
+.login-story {
+  background:
+    radial-gradient(ellipse at 5% 15%, #2364ae44, transparent 50%),
+    radial-gradient(ellipse at 90% 85%, #ba324126, transparent 45%), #0a1221;
+}
+.login-form {
+  background:
+    radial-gradient(ellipse at 0% 100%, #263e5c22, transparent), #0b101b;
+}
+.login-story h1 {
+  color: #f2f6ff;
+}
+.login-story .brand-ai {
+  color: #e69da8;
+}
+.demo-banner {
+  background:
+    radial-gradient(ellipse at top right, #96384b17, transparent),
+    linear-gradient(110deg, #142c46, #191f31);
+  border-color: #344961;
+}
+.recharts-default-tooltip {
+  background: #111e31 !important;
+}
+.result-card {
+  background: linear-gradient(110deg, #122b41, #191e30);
+  border-color: #355477;
+}
+@keyframes wave-flow-blue {
+  from {
+    transform: translate3d(-20px, 8px, 0) scaleY(0.96);
+  }
+  to {
+    transform: translate3d(24px, -9px, 0) scaleY(1.04);
+  }
+}
+@keyframes wave-flow-red {
+  from {
+    transform: translate3d(18px, -7px, 0) scaleY(1.04);
+  }
+  to {
+    transform: translate3d(-25px, 13px, 0) scaleY(0.97);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-wave-blue,
+  .hero-wave-red,
+  .hero-glow {
+    animation: none !important;
+  }
+}
